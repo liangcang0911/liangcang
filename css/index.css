@@ -105,8 +105,11 @@ ul,ol{list-style: none;}
 	margin: 0 auto;
 }
 .shop-list{
+	position: relative;
+	z-index: 99;
 	width: 1000px;
 	height: 320px;
+	background-color: #FFFFFF;
 }
 .shop-list>ul{
 	float: left;
@@ -157,10 +160,12 @@ ul,ol{list-style: none;}
 	position: absolute;
 	left: 0;
 	top: 33px;
+	z-index: 99;
 	display: none;
 	width: 1000px;
 	height: 160px;
 	border-bottom:1px solid #ccc;
+	background-color: #FFFFFF;
 }
 .magazin>ul{
 	width: 800px;
@@ -328,9 +333,330 @@ ul,ol{list-style: none;}
 }
 
 /*========人气良品=================================*/
+.hot_goods{
+	width: 1000px;
+	height: 2456px;
+	margin: 40px auto;
+}
+.hot_goods>p{
+	width: 1000px;
+	height: 40px;
+	border-bottom: 1px solid #CCCCCC;
+	margin-bottom: 40px;
+	font-size: 18px;
+	line-height: 40px;
+	text-align: center;
+}
+.hot_goods>ul{
+	width: 1000px;
+	height: 2376px;
+}
+.hot_goods>ul>li{
+	float: left;
+	width: 316px;
+	height: 366px;
+	margin-bottom: 30px;
+}
+.hot_goods>ul>li.mid{
+	margin-left: 26px;
+	margin-right: 26px;
+}
+.goods{
+	width: 316px;
+	height: 316px;
+	position: relative;
+}
+.goods:hover .txt{display: block;}
+.goods .pic{
+	width: 316px;
+	height: 316px;
+}
+.goods .pic>img{width: 100%;}
+.goods .txt{
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	width: 276px;
+	height: 276px;
+	padding: 20px;
+	background-color: rgba(0,0,0,0.6);	
+}
+.txt .price{
+	color: blue;
+	font-size: 16px;
+	font-style: italic;
+}
+.txt .tit{
+	margin-top: 80px;
+	width: 250px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+.txt .describe{
+	margin-top: 10px;
+	margin-left: 20px;
+	width: 250px;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.like{
+	width: 316px;
+	height: 40px;
+	margin-top: 10px;
+}
+.like .logo{
+	float: left;
+	width: 216px;
+	height: 40px;
+	font-size: 14px;
+}
+.like .logo img{height: 100%;margin-right: 10px;vertical-align: middle;}
+.like .love{
+	float: right;
+	width: 54px;
+	height: 40px;
+	line-height: 35px;
+	font-size: 14px;
+}
+.like .love img{height: 28px;float: right;}
 
+/*=============MORE==========================================*/
+.pagers{
+	width: 1000px;
+	height: 50px;
+	margin: 80px auto;
+}
+.pagers>a{
+	display: block;
+	width: 148px;
+	height: 50px;
+	margin: 0 auto;
+	background: url(../images/icon.png)no-repeat 0 -640px;
+}
+.pagers>a:hover{background-position: 0 -690px;}
+/*==============footer========================================*/
+.footer{
+	width: 100%;
+	height: 248px;
+	border-top: 1px solid #CCCCCC;
+	background-color: #fbfdfe;
+}
+.icon>a{
+	display: block;
+	width: 272px;
+	height: 16px;
+	margin: 40px auto;
+}
+.icon .hand{
+	float: left;
+	width: 30px;
+	height: 16px;
+	margin-right: 20px;
+	background-image: url(../images/icon.png);
+	background-position: -173px -355px;
+}
+.icon .shop-icon{
+	float: right;
+	width: 222px;
+	height: 16px;
+	background: url(../images/icon.png) no-repeat 0px -415px;
+}
+.slogen{
+	width: 1000px;
+	height: 102px;
+	margin: 25px auto;
+}
+.slogen dl{
+	float: left;
+	width: 250px;
+	height: 60px;
+}
+.slogen dt{
+	float: left;
+	width: 56px;
+	height: 60px;
+	background-image: url(../images/icon.png);
+}
+.slogen dd{
+	float: left;
+	width: 174px;
+	height: 50px;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+.slogen dd .chinese{
+	font-size:16px;
+	line-height: 20px;
+}
+.slogen dd .english{
+	font-size:12px;
+	line-height: 20px;
+	color: #999;
+}
+.slogen dt.dt1{background-position: 0 -356px;}
+.slogen dt.dt2{background-position: -146px -219px;}
+.slogen dt.dt3{background-position: -57px -356px;}
+.slogen dt.dt4{background-position: -115px -356px;}
 
+/*================copy================================================*/
+.copy{
+	width: 100%;
+	height: 224px;
+	background-color: #25292e;
+}
+.copy-top{
+	width: 1000px;
+	height: 104px;
+	margin: 0 auto;
+}
+a.phone{
+	float: left;
+	position: relative;
+	width: 196px;
+	height: 44px;
+	padding: 40px 0 20px 0;
+}
+a.phone:hover .code{display: block;}
+a.phone:hover .text{color: #999;}
+a.phone>i{
+	float: left;
+	width: 25px;
+	height: 44px;
+	margin-right: 20px;
+	background: url(../images/icon.png) no-repeat -174px 0;
+}
+a.phone>.text{
+	float: left;
+	width: 135px;
+	height: 44px;
+	color: #5C5C5C;
+	letter-spacing: 2px;
+}
+a.phone>.text p{
+	font-size: 14px;
+	line-height: 22px;
+}
+a.phone>.code{
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: 106px;
+	width: 236px;
+	height: 147px;
+	background: #FFFFFF;
+}
+.code .dl1{
+	float: left;
+	width: 98px;
+	height: 147px;
+	padding-right: 20px;
+}
+.dl1 dt{
+	width: 98px;
+	height: 95px;
+	background: url(../images/icon.png) no-repeat 0 -46px;
+}
+.dl1 dd{
+	width: 98px;
+	height: 52px;
+	line-height: 52px;
+	text-align: center;
+	font-size: 12px;
+}
+.code .dl2{
+	float: left;
+	width: 98px;
+	height: 147px;
+	padding-left: 20px;
+}
+.dl2 dt{
+	width: 98px;
+	height: 95px;
+	background: url(../images/icon.png) no-repeat -98px -46px;
+}
+.dl2 dd{
+	width: 98px;
+	height: 52px;
+	line-height: 52px;
+	text-align: center;
+	font-size: 12px;
+}
+.copy-top>ul{
+	position: relative;
+	float: right;
+	width: 200px;
+	height: 104px;
 
+}
+.copy-top>ul>li{
+	float: left;
+	height: 44px;
+	padding: 40px 0 20px 0;
+	margin-right: 20px;
+}
+.copy-top>ul>li.wx i{
+	display: block;
+	width: 26px;
+	height: 20px;
+	background-image: url(../images/icon.png);
+	background-position: -99px 0;
+}
+.copy-top>ul>li.wx:hover i{background-position: -99px -24px;}
+.copy-top>ul>li.wx:hover a{display: block;}
+.copy-top>ul>li.wx a{
+	display: none;
+	position: absolute;
+	left: -60px;
+	bottom: 106px;
+	width: 145px;
+	height: 145px;
+	background-image: url(../images/icon.png);
+	background-position: 0px -146px;
+}
+.copy-top>ul>li.wb a{
+	display: block;
+	width: 23px;
+	height: 20px;
+	background-image: url(../images/icon.png);
+	background-position: -149px 0;
+}
+.copy-top>ul>li.wb:hover a{background-position: -149px -22px;}
+.copy-top>ul>li.db a{
+	display: block;
+	width: 18px;
+	height: 20px;
+	background-image: url(../images/icon.png);
+	background-position: -129px 0;
+}
+.copy-top>ul>li.db:hover a{background-position: -129px -24px;}
+.copy-down{
+	width: 1000px;
+	height: 120px;
+	margin: 0 auto;
+}
+.copy-down>ul{width: 1000px;height: 20px;}
+.copy-down>ul li{
+	float: left;
+	padding: 0 10px;
+	border-left: 1px solid #5c5c5c;
+}
+.copy-down>ul li:hover a{color: #999;}
+.copy-down>ul li a{
+	font-size: 12px;
+	color: #5c5c5c;
+	letter-spacing: 2px;
+}
+.copy-down>ul li.first{border-left-width:0;padding-left: 0;}
+.copy-down>p{
+	font-size: 12px;
+	line-height: 20px;
+	color: #5c5c5c;
+	letter-spacing: 2px;
+}
 
 
 
