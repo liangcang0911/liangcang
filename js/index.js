@@ -59,14 +59,8 @@ var oSearch = document.querySelector('#search-ipt');
 var oBtn = document.querySelector('#search-btn');
 var n = true;
 oBtn.onclick = function () {
-	if(n){
-		animate(oSearch,{"left":0},500);
-		oBtn.parentElement.style.borderBottomColor = "black";
-	}else{
-		animate(oSearch,{"left":260},500);
-		oBtn.parentElement.style.borderBottomColor = "#EDEDED";
-	}
-	n = false;
+	animate(oSearch,{"left":0},500);
+	oBtn.parentElement.style.borderBottomColor = "black";
 }
 
 //==========banner轮播图========================
