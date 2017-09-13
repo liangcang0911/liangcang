@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
-		<title></title>
+		<meta charset="UTF-8">
+		<title>良仓.生活美学平台</title>
+		<link rel="icon" href="../images/favicon.ico"/>
 		<link rel="stylesheet" href="../css/index.css" />
-        <link rel="stylesheet" href="../css/top.css">
+		<link rel="stylesheet" href="../css/top.css" />
 	</head>
 	<body>
 		<div class="header">
@@ -12,17 +13,59 @@
 				<div>
 					<a class="logo" href="index.html"></a>
 					<ul>
-						<li><a href="#" class="first">登录  &nbsp;注册</a></li>
+						<li><a href="sign-in.html" class="first">登录</a>  &nbsp;<a href="sign-up.html" class="first">注册</a></li>
 						<li class="line">|</li>
-						<li><a href="#">购物车</a></li>
+						<li id="shopping-cart">
+							<a href="cart.html">购物车</a>
+							<div class="cart">
+								<div class="goods">
+									你的购物车暂时没有商品...
+								</div>
+								<a href="#">快去请购良仓商品吧！</a>
+							</div>
+						</li>
 						<li class="line">|</li>
-						<li><a href="#">消息</a></li>
-						<li class="line">|</li>
-						<li><a href="#">添加良品</a></li>
+						<li id="information1">
+							<a href="information.html">消息</a>
+							<ol>
+								<li>
+									<a href="movement.html">
+										动态<span>0</span>
+									</a>
+								</li>
+								<li>
+									<a href="information.html">
+										评论<span>0</span>
+									</a>
+								</li>
+								<li>
+									<a href="personal-letter.html">
+										私信<span>0</span>
+									</a>
+								</li>
+								<li>
+									<a href="fans.html">
+										粉丝<span>0</span>
+									</a>
+								</li>
+								<li>
+									<a href="like.html">
+										喜欢<span>0</span>
+									</a>
+								</li>
+								<li>
+									<a href="inform.html">
+										通知<span>0</span>
+									</a>
+								</li>
+							</ol>
+						</li>
+						<li class="line">|</li>s
+						<li><a href="add.html">添加良品</a></li>
 					</ul>
 				</div>				
 			</div>
-			<div class="items-nav">
+			<div class="items-nav" id="items-nav">
 				<div>
 					<ul>
 						<li class="first"><a href="#">首页</a></li>
@@ -177,9 +220,9 @@
 					</ul>
 					<div class="search">
 						<div>
-							<input type="text" placeholder="search..."/>
+							<input id="search-ipt" type="text" placeholder="search..."/>
 						</div>
-						<a href="#"></a>
+						<a href="#" id="search-btn"></a>
 					</div>			
 				</div>
 			</div>
@@ -286,4 +329,7 @@
 			</div>
 		</div>
 	</body>
+	<script src="../js/animate.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/myajax.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
 </html>

@@ -454,9 +454,6 @@ li{list-style: none;}
 	border-radius: 4px;
 	border: none;
 }
-#gdbuy{
-	margin-bottom: 50px;
-}
 #contents{
 	width: 1000px;
 	height: 30px;
@@ -474,17 +471,20 @@ li{list-style: none;}
 	position: relative;
 	width: 352px;
 	height: 352px;
-	background: url(../images/259194.jpg)no-repeat;
-	background-size: cover;
-	left: 300px;
+	top: 10px;
+	left: 100px;
 }
 #buyin{
 	position: relative;
 	float: right;
 	width: 352px;
 	height: 352px;
-	top: -352px;
+	top: -440px;
 	right: 300px;
+	overflow: hidden;
+}
+#picshow img{
+	width: 100%;
 }
 #buyin #presslike i{
 	float: left;

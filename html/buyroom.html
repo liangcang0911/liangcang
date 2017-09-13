@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
-		<title></title>
+		<meta charset="UTF-8">
+		<title>良仓.生活美学平台</title>
+		<link rel="icon" href="../images/favicon.ico"/>
 		<link rel="stylesheet" href="../css/index.css" />
-        <link rel="stylesheet" href="../css/top.css">
+		<link rel="stylesheet" href="../css/top.css" />
 	</head>
 	<body>
 		<div class="header">
@@ -12,17 +13,59 @@
 				<div>
 					<a class="logo" href="index.html"></a>
 					<ul>
-						<li><a href="#" class="first">登录  &nbsp;注册</a></li>
+						<li><a href="sign-in.html" class="first">登录</a>  &nbsp;<a href="sign-up.html" class="first">注册</a></li>
 						<li class="line">|</li>
-						<li><a href="#">购物车</a></li>
+						<li id="shopping-cart">
+							<a href="cart.html">购物车</a>
+							<div class="cart">
+								<div class="goods">
+									你的购物车暂时没有商品...
+								</div>
+								<a href="#">快去请购良仓商品吧！</a>
+							</div>
+						</li>
 						<li class="line">|</li>
-						<li><a href="#">消息</a></li>
-						<li class="line">|</li>
-						<li><a href="#">添加良品</a></li>
+						<li id="information1">
+							<a href="information.html">消息</a>
+							<ol>
+								<li>
+									<a href="movement.html">
+										动态<span>0</span>
+									</a>
+								</li>
+								<li>
+									<a href="information.html">
+										评论<span>0</span>
+									</a>
+								</li>
+								<li>
+									<a href="personal-letter.html">
+										私信<span>0</span>
+									</a>
+								</li>
+								<li>
+									<a href="fans.html">
+										粉丝<span>0</span>
+									</a>
+								</li>
+								<li>
+									<a href="like.html">
+										喜欢<span>0</span>
+									</a>
+								</li>
+								<li>
+									<a href="inform.html">
+										通知<span>0</span>
+									</a>
+								</li>
+							</ol>
+						</li>
+						<li class="line">|</li>s
+						<li><a href="add.html">添加良品</a></li>
 					</ul>
 				</div>				
 			</div>
-			<div class="items-nav">
+			<div class="items-nav" id="items-nav">
 				<div>
 					<ul>
 						<li class="first"><a href="#">首页</a></li>
@@ -177,37 +220,24 @@
 					</ul>
 					<div class="search">
 						<div>
-							<input type="text" placeholder="search..."/>
+							<input id="search-ipt" type="text" placeholder="search..."/>
 						</div>
-						<a href="#"></a>
+						<a href="#" id="search-btn"></a>
 					</div>			
 				</div>
 			</div>
 		</div>
-		<div id="gdbuy">
+		<div id="gdbuy" style="overflow: hidden;">
 			<div id="contents">
 				<a href="#">良仓</a> >
 				<a href="#">文化</a> >
 				<p>《知日・这就是三岛由纪夫》特集 ｜一个无法被定义的日本大文豪</p>
 			</div>
-			<div id="picshow"></div>
+			<main>
+                <ul id="goods"></ul>
+            </main>
 			<div id="buyin">
-				<div id="presslike"><i></i> 237</div>
-				<div id="gdname"><a href="#">知日</a></div>
-				<div class="gdname">《知日・这就是三岛由纪夫》特集 ｜一个无法被定义的日本大文豪</div>
-				<div id="gdprice">价格 : <span>¥41.00元</span></div>
-				<div id="s-icon"><span id="span1"></span>免运费&nbsp;<span id="span2"></span>&nbsp;&nbsp;&nbsp;正品授权</div>
-			    <div id="gdtype">数量 : <span>一本</span></div>
-			    <div id="gdnum">数量 : 
-			    	<i id="jian"></i>
-			    	<span>1</span>
-			    	<i id="jia"></i>
-			    </div>
-			    <button>立即购买</button>
-			    <div id="buyout">
-			    	<a href="#" id="a1"><i></i>加入购物车</a>
-			    	<a href="#" id="a2"><i></i>分享</a>
-			    </div>
+				
 			</div>
 		</div>
 		<div class="footer">
@@ -300,4 +330,9 @@
 			</div>
 		</div>
 	</body>
+	<script src="../js/animate.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/myajax.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/buyroom.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="../js/tcart.js" type="text/javascript" charset="utf-8"></script>-->
 </html>
