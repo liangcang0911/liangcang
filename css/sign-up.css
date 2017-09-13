@@ -18,9 +18,9 @@ ul,ol{list-style: none;}
 
 /*===========ul===================================*/
 ul{
-	width: 300px;
+	width: 400px;
 	margin: 0 auto;
-	padding-top: 150px;
+	padding-top: 100px;
 }
 ul li{width: 100%;margin-bottom: 10px;}
 .logo{margin-bottom: 60px;}
@@ -34,60 +34,100 @@ ul li{width: 100%;margin-bottom: 10px;}
 .phone{
 	height: 30px;
 	padding: 10px 0;
-	background-color: #CCCCCC;
 	color: #FFFFFF;
 }
-.phone>i{
+.phone>span{
 	float: left;
-	width: 30px;
-	height: 30px;
+	width: 70px;
 	padding-right: 10px;
-	border-right: 1px solid #FFFFFF;
-	background: url(../images/usericon.png) no-repeat center;
+	font-size: 15px;
+	line-height: 50px;
 }
 .phone>input{
 	float: left;
-	width: 240px;
-	height: 30px;
+	width: 310px;
+	height: 50px;
 	padding-left: 10px;
 	border: 0;
 	outline: none;
-	font-size: 18px;
+	font-size: 16px;
 	background-color: #CCCCCC;
 }
+.code{
+	height: 30px;
+	padding: 10px 0;
+	color: #FFFFFF;
+}
+.code>span.s1{
+	float: left;
+	width: 70px;
+	padding-right: 10px;
+	font-size: 15px;
+	line-height: 50px;
+}
+.code>input{
+	float: left;
+	width: 142px;
+	height: 50px;
+	padding-left: 10px;
+	border: 0;
+	outline: none;
+	font-size: 16px;
+	background-color: #CCCCCC;
+}
+.code>span.s2{
+	float: left;
+	width: 64px;
+	height: 28px;
+	margin-left: 10px;
+	margin-top: 11px;
+	border: 1px solid black;
+	background-color: #FFFFFF;
+}
+.code>span.s3{
+	float: left;
+	width: 84px;
+	height: 28px;
+	margin-top: 11px;
+	margin-left: 5px;
+	font-size: 12px;
+	line-height: 28px;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
 .password{
 	height: 30px;
 	padding: 10px 0;
-	background-color: #CCCCCC;
 	color: #FFFFFF;
 }
-.password>i{
+.password>span{
 	float: left;
-	width: 30px;
-	height: 30px;
+	width: 70px;
 	padding-right: 10px;
-	border-right: 1px solid #FFFFFF;
-	background: url(../images/passicon.png) no-repeat center;
+	font-size: 15px;
+	line-height: 50px;
 }
 .password>input{
 	float: left;
-	width: 240px;
-	height: 30px;
+	width: 310px;
+	height: 50px;
 	padding-left: 10px;
 	border: 0;
 	outline: none;
-	font-size: 18px;
+	font-size: 16px;
 	background-color: #CCCCCC;
 }
-.checked{
-	height: 20px;
-	margin: 10px 0;
+.checked label{
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 80px;
 }
 .checked label{float: left;}
 .checked input{margin-right: 5px;}
 .checked>a{float: right;}
 .enter>input{
-	width: 300px;
+	width: 400px;
 	height: 50px;
 	border: 0;
 	outline: none;

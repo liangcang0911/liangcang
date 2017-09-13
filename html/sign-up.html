@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>用户登录.良仓－生活美学指南</title>
+		<title>用户注册.良仓－生活美学指南</title>
 		<link rel="icon" href="../images/favicon.ico"/>
-		<link rel="stylesheet" type="text/css" href="../css/sign-in-more.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/sign-up.css"/>
 	</head>
 	<body>
 		<ul>
@@ -12,19 +12,28 @@
 				<a href="index.html"></a>
 			</li>
 			<li class="phone">
-				<i></i>
-				<input type="text" placeholder="手机号/邮箱/用户名" />
+				<span>手机号</span>
+				<input type="text" placeholder="请输入手机号" />
+			</li>
+			<li class="code">
+				<span class="s1">验证码</span>
+				<input type="text" placeholder="输入验证码" />
+				<span class="s2"></span>
+				<span class="s3">看不清，换一张</span>
 			</li>
 			<li class="password">
-				<i></i>
-				<input type="password" placeholder="密码" />
+				<span>创建密码</span>
+				<input type="password" placeholder="6-20位字符组成，区分大小写" />
+			</li>
+			<li class="password">
+				<span>确认密码</span>
+				<input type="password" placeholder="确认密码" />
 			</li>
 			<li class="checked">
-				<label for="check"><input type="checkbox" checked="checked" id="check"/>自动登录</label>
-				<a href="#">忘记密码？</a>
+				<label for="check"><input type="checkbox" checked="checked" id="check"/>同意《良仓注册条款》</label>				
 			</li>
 			<li class="enter">
-				<input type="submit" value="登录" />
+				<input type="submit" value="立即注册" />
 			</li>
 			<li class="more">
 				<ol>
@@ -33,7 +42,7 @@
 					<li class="db"></li>					
 					<li class="tx"></li>					
 				</ol>
-				<a href="#">注册良仓</a>
+				<a href="#">登录良仓</a>
 			</li>
 		</ul>			
 	</body>
