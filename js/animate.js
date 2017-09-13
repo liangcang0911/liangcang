@@ -42,6 +42,12 @@ function animate(elem, targetJSON, time, tweenString, callback) {
     }
   }
 
+  //检查缓冲字符串是否在缓冲对象中
+  //拦截器，就是在程序未开始执行之前先判断不合法时就退出; 和表单验证类似
+  if (!Tween[tweenString]) {
+    throw new Error('缓冲字符串不合法，请检查');
+  }
+
   //动画间隔要根据不同浏览器来设置：
   if (navigator.userAgent.indexOf("MSIE") != -1) {
     var interval = 50;
@@ -75,6 +81,8 @@ function animate(elem, targetJSON, time, tweenString, callback) {
   var frame = 0;
   //当前的值
   var v;
+  //当前动画正在执行
+  elem.isAnimated = true;
   //定时器
   var timer = setInterval(function(){
     //要让所有的属性发生变化
@@ -104,6 +112,7 @@ function animate(elem, targetJSON, time, tweenString, callback) {
         }
       }
       clearInterval(timer);
+      elem.isAnimated = false;
       //回调函数
       callback && callback.apply(elem);
     }
