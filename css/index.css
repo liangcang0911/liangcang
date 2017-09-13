@@ -92,8 +92,8 @@ ul,ol{list-style: none;}
 }
 #shopping-cart:hover .cart{display: block;}
 /*==========消息二级菜单===================================*/
-#information{position: relative;}
-#information>ol{
+#information1{position: relative;}
+#information1>ol{
 	display: none;
 	position: absolute;
 	left: -50px;
@@ -105,17 +105,17 @@ ul,ol{list-style: none;}
 	background-color: #292f34;
 	overflow: hidden;
 }
-#information>ol>li{
+#information1>ol>li{
 	width: 170px;
 	height: 22px;
 	padding: 10px 0;
 	border-bottom: 1px solid #E8E8E8;
 }
-#information>ol>li span{
+#information1>ol>li span{
 	float: right;
 }
-#information>ol>li:hover{opacity: 0.8;}
-#information:hover ol{display: block;}
+#information1>ol>li:hover{opacity: 0.8;}
+#information1:hover ol{display: block;}
 
 .items-nav{
 	width: 100%;

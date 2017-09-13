@@ -43,7 +43,8 @@ window.onscroll = function(e) {
     oNav.style.left = 0;
     oNav.style.marginTop = 0;
   }else {
-    oNav.style.marginTop = topDis + 'px';
+    oNav.style.position = 'relative';
+    oNav.style.zIndex = 0;
   }
 };
 function getAllTop(obj) {
