@@ -155,18 +155,20 @@ ul,ol{list-style: none;}
 	position: absolute;
 	left: 0;
 	top: 33px;
+	z-index: 99;
 	display: none;
 	height: 440px;
 	border-bottom:1px solid #ccc;
+	
 }
 .shop>div{
 	width: 1000px;
 	height: 440px;
 	margin: 0 auto;
+	
 }
 .shop-list{
 	position: relative;
-	z-index: 99;
 	width: 1000px;
 	height: 320px;
 	background-color: #FFFFFF;
@@ -207,6 +209,7 @@ ul,ol{list-style: none;}
 	width: 100%;
 	height: 80px;
 	padding:20px 0;
+	background-color: #FFFFFF;
 }
 .details>a{
 	display: inline-block;

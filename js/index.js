@@ -4,10 +4,14 @@
   var oLogout = document.querySelector('#zc');
 	if (localStorage.username) { 
 	  oUsername.innerText = localStorage.username;
+	  oUsername.href = "index.html";
 		oLogout.innerText = "退出";
+		oLogout.href = "sign-in.html";
 	} else {
 	  oUsername.innerText = "登录";
+	  oUsername.href = "sign-in-more.html";
 		oLogout.innerText = "注册";
+		oLogout.href = "sign-up.html";
 	}
 
 //=================头部吸顶效果=======================================
@@ -23,7 +27,7 @@ window.onscroll = function(e) {
     oNav.style.marginTop = 0;
   }else {
     oNav.style.position = 'relative';
-    oNav.style.zIndex = 0;
+    oNav.style.zIndex = '99';
   }
 };
 function getAllTop(obj) {
@@ -164,9 +168,20 @@ var oGoods = document.querySelector('#hot-goods');
       }
     });
 
-//商品详情============================
-
-
+//商品分类============================
+var oGoodList = document.querySelector('#shop-list');
+var oSpans = oGoodList.querySelectorAll('span');
+var oAs = oGoodList.querySelectorAll('a');
+  myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {}, function(err,responseText){
+    var json = JSON.parse(responseText);
+    var data = json.data;
+    for (var i = 0; i < data.length; i++) {
+      var obj = data[i];
+      console.log(obj);
+      oSpans[i].innerText = obj.cat_name;
+    }
+  });
+  
 
 
 
