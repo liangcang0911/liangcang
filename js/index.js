@@ -1,36 +1,15 @@
-//================获取人气商品=======================
-var oGoods = document.querySelector('#hot-goods');
-    myajax.get('http://h6.duchengjiu.top/shop/api_goods.php', {}, function(err,responseText){
-      var json = JSON.parse(responseText);
-      var data = json.data;
-      for (var i = 0; i < data.length; i++) {
-        var obj = data[i];
-//      console.log(obj);
-        oGoods.innerHTML += `<li>
-        	<div class="goods">
-						<a href="#" class="pic">
-							<img src="${obj.goods_thumb}"/>
-						</a>
-						<a href="#" class="txt">
-							<p class="price">${obj.price}</p>
-							<p class="tit">${obj.goods_name}</p>
-							<p class="describe"> ${obj.goods_desc}</p>
-						</a>
-					</div>
-					<div class="like">
-						<a href="#" class="logo">
-							<img src="../images/932_1504775977.jpg"/>
-							知日
-						</a>
-						<a href="#" class="love">
-							238
-							<img src="../images/love_notice26_28.png"/>							
-						</a>
-					</div>    
-        </li>`
-      }
-    });
-    
+//判断是否已登录===================================
+//判断用户名如果存在, 则显示用户名并显示退出按钮, 否则显示注册和登录
+  var oUsername = document.querySelector('#dl');
+  var oLogout = document.querySelector('#zc');
+	if (localStorage.username) { 
+	  oUsername.innerText = localStorage.username;
+		oLogout.innerText = "退出";
+	} else {
+	  oUsername.innerText = "登录";
+		oLogout.innerText = "注册";
+	}
+
 //=================头部吸顶效果=======================================
 var oNav =document.querySelector('#items-nav');
 var topDis = getAllTop(oNav);
@@ -63,6 +42,13 @@ oBtn.onclick = function () {
 	animate(oSearch,{"left":0},500);
 	oBtn.parentElement.style.borderBottomColor = "black";
 }
+
+//搜索功能===========================================
+  oSearch.onkeyup = function(event) {
+    if (event.keyCode === 13) {
+      location.href = 'search.html?search_text='+this.value;
+    }
+  }
 
 //==========banner轮播图========================
 var oLeft = document.getElementById("left");
@@ -145,9 +131,40 @@ if (n === listlength) {
   oIs[n].style.backgroundColor = 'black';
 }
 
+//================获取人气商品=======================
+var oGoods = document.querySelector('#hot-goods');
+    myajax.get('http://h6.duchengjiu.top/shop/api_goods.php', {}, function(err,responseText){
+      var json = JSON.parse(responseText);
+      var data = json.data;
+      for (var i = 0; i < data.length; i++) {
+        var obj = data[i];
+//      console.log(obj);
+        oGoods.innerHTML += `<li><a href="buyroom.html">
+        	<div class="goods">
+						<a href="buyroom.html" class="pic">
+							<img src="${obj.goods_thumb}"/>
+						</a>
+						<a href="buyroom.html" class="txt">
+							<p class="price">${obj.price}</p>
+							<p class="tit">${obj.goods_name}</p>
+							<p class="describe"> ${obj.goods_desc}</p>
+						</a>
+					</div></a> 
+					<div class="like">
+						<a href="#" class="logo">
+							<img src="../images/932_1504775977.jpg"/>
+							知日
+						</a>
+						<a href="#" class="love">
+							238
+							<img src="../images/love_notice26_28.png"/>							
+						</a>
+					</div>   
+        </li>`
+      }
+    });
 
-
-
+//商品详情============================
 
 
 

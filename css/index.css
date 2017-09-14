@@ -417,6 +417,9 @@ ul,ol{list-style: none;}
 	margin-right: 26px;
 	margin-bottom: 30px;
 }
+.hot_goods>ul>li>a{
+	display: block;
+}
 .goods{
 	width: 316px;
 	height: 316px;
