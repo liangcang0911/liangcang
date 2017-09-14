@@ -5,7 +5,6 @@
 		<title>良仓.生活美学平台</title>
 		<link rel="icon" href="../images/favicon.ico"/>
 		<link rel="stylesheet" href="../css/index.css" />
-		<link rel="stylesheet" href="../css/top.css" />
 	</head>
 	<body>
 		<div class="header">
@@ -13,7 +12,7 @@
 				<div>
 					<a class="logo" href="index.html"></a>
 					<ul>
-						<li><a href="sign-in.html" class="first">登录</a>  &nbsp;<a href="sign-up.html" class="first">注册</a></li>
+						<li><a href="sign-in.html" class="first" id="dl">登录</a>  &nbsp;<a href="sign-up.html" class="first" id="zc">注册</a></li>
 						<li class="line">|</li>
 						<li id="shopping-cart">
 							<a href="cart.html">购物车</a>
@@ -227,30 +226,47 @@
 				</div>
 			</div>
 		</div>
-		<div id="information">
-			<div id="top-list">
-				<a href="information.html">评论</a>
-				<a href="personal-letter.html">私信</a>
-				<a href="inform.html">通知</a>
-				<span style="left: 105px;"></span>
+		<div class="banner" id="banner">
+			<div class="banner-pic" id="banner-pic">
+				<ul>
+					<li><a href=""><img src="../images/1076.jpg"/></a></li>
+					<li><a href=""><img src="../images/1074.jpg"/></a></li>
+					<li><a href=""><img src="../images/1075.jpg"/></a></li>
+					<li><a href=""><img src="../images/1070.jpg"/></a></li>
+					<li><a href=""><img src="../images/1073.jpg"/></a></li>
+				</ul>	
 			</div>
-			<div id="noticelist">
-				<div id="list1">
-					<span id="img1"></span>
-					<p>雾霾（01月09日 12:45)</p>
-					<p>短信我试试（12月22日 18:27)</p>
-					<p>网站维护公告（07月12日 15:13)</p>
-					<p id="look">查看详情</p>
-				</div>
-				<div id="list2">
-					<span id="img2"></span>
-					<p>你有0位新粉丝，去看看吗？（10月8日   14:51)</p>
-				</div>
-				<div id="list3">
-					<span id="img3"></span>
-					<p>又有0位朋友喜欢了你的良品，去看看吗？</p>
-				</div>
+			<div class="left" id="left">
+			<i></i>
 			</div>
+			<div class="right" id="right">
+				<i></i>
+			</div>						
+			<div class="circle" id="circle">
+				<ul >
+					<li><i class="curren"></i></li>
+					<li><i></i></li>
+					<li><i></i></li>
+					<li><i></i></li>
+					<li><i></i></li>
+				</ul>				
+			</div>
+		</div>
+		<div class="banner2">
+			<a href="#" class="pic1 pic-small"><img src="../images/28519.jpg"/></a>
+			<a href="#" class="pic2 pic-small"><img src="../images/28538.jpg"/></a>
+			<a href="#" class="pic3 pic-big"><img src="../images/28540.jpg"/></a>
+			<a href="#" class="pic4 pic-small"><img src="../images/28539.jpg"/></a>
+			<a href="#" class="pic5 pic-small"><img src="../images/28521.jpg"/></a>
+		</div>
+		<div class="hot_goods">
+			<p>人气商品</p>
+			<ul id="hot-goods">
+				
+			</ul>
+		</div>
+		<div class="pagers">
+			<a href="#"></a>
 		</div>
 		<div class="footer">
 			<div class="icon">
@@ -344,6 +360,5 @@
 	</body>
 	<script src="../js/animate.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/myajax.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>-->
 </html>
-

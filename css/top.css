@@ -461,11 +461,14 @@ li{list-style: none;}
 	line-height: 30px;
 	color: #6C6C6C;
 }
-#contents a{color: #6C6C6C;}
+#contents a{
+	position: relative;
+	color: #6C6C6C;
+	}
 #contents p{
 	position: relative;
-	float: right;
-	right: 570px;
+	left: 78px;
+	top: -30px;
 }
 #picshow{
 	position: relative;
@@ -478,7 +481,7 @@ li{list-style: none;}
 	position: relative;
 	float: right;
 	width: 352px;
-	height: 352px;
+	height: 380px;
 	top: -440px;
 	right: 300px;
 	overflow: hidden;
@@ -503,7 +506,6 @@ li{list-style: none;}
 }
 #buyin #gdname a{color: #6C6C6C;}
 #buyin .gdname{
-	height: 26px;
 	width: 352px;
 	font-size: 20px;
 	margin-top: 10px;
@@ -512,7 +514,6 @@ li{list-style: none;}
 #buyin #gdprice{
 	font-size: 12px;
 	color: #6C6C6C;
-	margin-top: 30px;
 }
 #buyin #gdprice span{
 	font-size: 24px;
@@ -593,7 +594,7 @@ li{list-style: none;}
 	right: 210px;
 	top: -5px;
 }
-#buyin button{
+#buyin #add-to-cart{
 	width: 352px;
 	height: 40px;
 	border: none;

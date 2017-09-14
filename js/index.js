@@ -138,7 +138,7 @@ var oGoods = document.querySelector('#hot-goods');
       var data = json.data;
       for (var i = 0; i < data.length; i++) {
         var obj = data[i];
-//      console.log(obj);
+      console.log(obj);
         oGoods.innerHTML += `<li><a href="buyroom.html?goods_id=${obj.goods_id}">
         	<div class="goods">
 						<a href="buyroom.html?goods_id=${obj.goods_id}" class="pic">
