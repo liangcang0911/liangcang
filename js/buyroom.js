@@ -33,6 +33,7 @@ myajax.get('http://h6.duchengjiu.top/shop/api_goods.php', {
 			    <div id="buyout">
 			    	<a href="#" id="a1" class="add-to-cart"><i></i>加入购物车</a>
 			    	<a href="#" id="a2"><i></i>分享</a>
+
 			    </div>`;
 			    var ospan = document.querySelector("span[id=num]") 
 			    var ojian = document.querySelector("i[id=jian]") 
@@ -50,6 +51,10 @@ myajax.get('http://h6.duchengjiu.top/shop/api_goods.php', {
 			    		ospan.innerText = 10
 			    	}
 			    }
+				var oBuy = document.querySelector('#add-to-cart');
+					oBuy.onclick = function () {
+						location.href = "pay.html";
+					}
 });
 var oa = document.querySelector("a[id=catname]")
 myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {
@@ -85,4 +90,12 @@ myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {
           }
         })
       }
+
    }
+
+    
+  
+
+
+
+

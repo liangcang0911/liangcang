@@ -21,7 +21,7 @@ window.onscroll = function(e) {
   var nowTop = document.documentElement.scrollTop || document.body.scrollTop;
   if(nowTop >= topDis) {
     oNav.style.position = 'fixed';
-    oNav.style.zIndex = '999';
+    oNav.style.zIndex = '99';
     oNav.style.top = 0;
     oNav.style.left = 0;
     oNav.style.marginTop = 0;
@@ -185,6 +185,9 @@ var oAs = oGoodList.querySelectorAll('a');
     }
   });
   
+//购物车显示商品=======================
+	var oCart = document.querySelector('#goods-cart');
+
 
 
 

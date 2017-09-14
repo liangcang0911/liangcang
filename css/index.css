@@ -67,7 +67,7 @@ ul,ol{list-style: none;}
 	position: absolute;
 	left: -100px;
 	top: 56px;
-	z-index: 99;
+	z-index: 999;
 	width: 320px;
 	height: 122px;
 }
@@ -98,7 +98,7 @@ ul,ol{list-style: none;}
 	position: absolute;
 	left: -50px;
 	top: 56px;
-	z-index: 99;
+	z-index: 999;
 	width: 170px;
 	height: 247px;
 	padding: 10px;
