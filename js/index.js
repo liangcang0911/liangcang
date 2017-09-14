@@ -139,12 +139,12 @@ var oGoods = document.querySelector('#hot-goods');
       for (var i = 0; i < data.length; i++) {
         var obj = data[i];
 //      console.log(obj);
-        oGoods.innerHTML += `<li><a href="buyroom.html">
+        oGoods.innerHTML += `<li><a href="buyroom.html?goods_id=${obj.goods_id}">
         	<div class="goods">
-						<a href="buyroom.html" class="pic">
+						<a href="buyroom.html?goods_id=${obj.goods_id}" class="pic">
 							<img src="${obj.goods_thumb}"/>
 						</a>
-						<a href="buyroom.html" class="txt">
+						<a href="buyroom.html?goods_id=${obj.goods_id}" class="txt">
 							<p class="price">${obj.price}</p>
 							<p class="tit">${obj.goods_name}</p>
 							<p class="describe"> ${obj.goods_desc}</p>
