@@ -148,7 +148,7 @@ li{list-style: none;}
 	height: 160px;
 	background: #3c3c3c;
 	font-size: 12px;
-	right: -24px;
+	right: 145px;
 	margin-top: 8px;
 	color: white;
 	text-align: center;
@@ -158,7 +158,7 @@ li{list-style: none;}
 #footlist #area #arealist{
 	position: absolute;
 	width: 167px;
-	right: -70px;
+	right: 100px;
 	height: 216px;
 	margin-top: 10px;
 	font-size: 12px;
@@ -188,7 +188,7 @@ li{list-style: none;}
 	border-bottom-color: #3c3c3c;
 	position: absolute;
 	margin-top: -10px;
-	right: 12px;
+	right: 185px;
 }
 #information #money li:hover{
 	background: #1c1c1c;
