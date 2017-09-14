@@ -36,6 +36,10 @@ myajax.get('http://h6.duchengjiu.top/shop/api_goods.php', {
 			    	<a href="#" id="a2"><i></i>分享</a>
 			    </div>
   `;
+  var oBuy = document.querySelector('#add-to-cart');
+	oBuy.onclick = function () {
+		location.href = "pay.html";
+	}
 });
 var oa = document.querySelector("a[id=catname]")
 myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {
@@ -72,3 +76,7 @@ myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {
         })
       }
     }
+  
+
+
+
