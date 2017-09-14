@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>良仓.生活美学平台</title>
+		<link rel="icon" href="../images/favicon.ico"/>
+		<link rel="stylesheet" href="../css/index.css" />
+		<script src="../js/animate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/myajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			#order{
+				width: 1000px;
+				margin: 0 auto;
+			}
+	    #order li {
+	      width: 980px;
+	      padding: 10px;
+	      margin-bottom: 20px;
+	      border-bottom: 1px solid black;
+	    }
+	    #order li div.title {
+	      line-height: 30px;
+	      font-size: 14px;
+	      padding:5px;	
+	      overflow: hidden;      
+	    }
+	    #order li div.title>p{
+	    	float: left;
+	    	margin-right: 50px;
+	    }
+	    #order li div.order-goods {
+	     font-size: 12px;	     
+	    }
+	    #order li div.order-goods div{
+	      overflow: hidden;
+	    }
+	    #order li div.order-goods div img {
+	      float: left;
+	      width: 100px;
+	      margin-right: 40px;
+	      border-radius: 50%;
+	    }
+	    #order li div.order-goods div .describe{float: left;}
+	    .cancel-order {
+	      float: right;
+	      padding-left: 5px;
+	      padding-right: 5px;
+	      border-radius: 5px;
+	      background-color: orange;
+	      color: white;
+	      cursor: pointer;
+	    }
+	    .cancel-order:hover {
+	      background-color: white;
+	      color: orange;
+	    }
+	  </style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="items-logo">
+				<div>
+					<a class="logo" href="index.html"></a>
+					<ul>
+						<li><a href="sign-in.html" class="first" id="dl">登录</a>  &nbsp;<a href="sign-up.html" class="first" id="zc">注册</a></li>
+						<li class="line">|</li>
+						<li id="shopping-cart">
+							<a href="cart.html">购物车</a>
+							<div class="cart">
+								<div class="goods" id="goods-cart">
+									<span>你的购物车暂时没有商品...</span>
+								</div>
+								<a href="#">快去请购良仓商品吧！</a>
+							</div>
+						</li>
+						<li class="line">|</li>
+						<li id="information1">
+							<a href="information.html">消息</a>
+							<ol>
+								<li>
+									<a href="movement.html">
+										动态<span>0</span>
+									</a>
+								</li>
+								<li>
+									<a href="information.html">
+										评论<span>0</span>
+									</a>
+								</li>
+								<li>
+									<a href="personal-letter.html">
+										私信<span>0</span>
+									</a>
+								</li>
+								<li>
+									<a href="fans.html">
+										粉丝<span>0</span>
+									</a>
+								</li>
+								<li>
+									<a href="like.html">
+										喜欢<span>0</span>
+									</a>
+								</li>
+								<li>
+									<a href="inform.html">
+										通知<span>0</span>
+									</a>
+								</li>
+							</ol>
+						</li>
+						<li class="line">|</li>
+						<li><a href="add.html">添加良品</a></li>
+					</ul>
+				</div>				
+			</div>
+			<div class="items-nav" id="items-nav">
+				<div>
+					<ul>
+						<li class="first"><a href="#">首页</a></li>
+						<li id="shop">
+							<a href="goods.html">商店</a>
+							<div class="shop">
+								<div>
+									<div class="shop-list" id="shop-list">
+										<ul>
+											<li>
+												<a href="#">
+													<img src="../images/23687.png"/>
+													<span></span>											
+												</a>
+												<div class="shop-list-second">
+													
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<img src="../images/23685.png"/>
+													<span></span>											
+												</a>
+												<div class="shop-list-second">
+													
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<img src="../images/23686.png"/>
+													<span></span>											
+												</a>
+												<div class="shop-list-second">
+													
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<img src="../images/23683.png"/>
+													<span></span>											
+												</a>
+												<div class="shop-list-second">
+													
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<img src="../images/23682.png"/>
+													<span></span>											
+												</a>
+												<div class="shop-list-second">
+													
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<img src="../images/23684.png"/>
+													<span></span>											
+												</a>
+												<div class="shop-list-second">
+													
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<img src="../images/23680.png"/>
+													<span></span>											
+												</a>
+												<div class="shop-list-second">
+													
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<img src="../images/23679.png"/>
+													<span></span>											
+												</a>
+												<div class="shop-list-second">
+													
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<img src="../images/23678.png"/>
+													<span></span>											
+												</a>
+												<div class="shop-list-second">
+													
+												</div>
+											</li>
+											<li>
+												<a href="#">
+													<img src="../images/23677.png"/>
+													<span></span>											
+												</a>
+												<div class="shop-list-second">
+													
+												</div>
+											</li>									
+										</ul>
+										<a href="#" class="pic">
+											<img src="../images/315574.jpg"/>
+											<span>新视线： 2015年7月刊</span>
+										</a>
+									</div>
+									<div class="details">
+										<a href="">查看所有品牌 &gt;</a>
+										<a href="">最新到货 &gt;</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li id="magazin">
+							<a href="#">杂志</a>
+							<div class="magazin share">
+								<ul>
+									<li><a href="#">趣物</a></li>
+									<li><a href="#">数码</a></li>
+									<li><a href="#">汽车</a></li>
+									<li><a href="#">文化</a></li>
+									<li><a href="#">时尚</a></li>
+									<li><a href="#">美食</a></li>
+									<li><a href="#">建筑</a></li>
+									<li><a href="#">空间</a></li>
+									<li><a href="#">圈子</a></li>
+									<li><a href="#">清单</a></li>
+									<li><a href="#">活动</a></li>
+									<li><a href="#">视频</a></li>
+								</ul>
+							</div>
+						</li>
+						<li id="share">
+							<a href="#">分享</a>
+							<div class="magazin share">
+								<ul>
+									<li><a href="#">男士</a></li>
+									<li><a href="#">家居</a></li>
+									<li><a href="#">数码</a></li>
+									<li><a href="#">文具</a></li>
+									<li><a href="#">玩具</a></li>
+									<li><a href="#">美容</a></li>
+									<li><a href="#">孩子</a></li>
+									<li><a href="#">宠物</a></li>
+									<li><a href="#">饮食</a></li>
+									<li><a href="#">运动</a></li>
+									<li><a href="#">文化</a></li>
+									<li><a href="#">女士</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">达人</a></li>
+					</ul>
+					<div class="search">
+						<div>
+							<input id="search-ipt" type="text" placeholder="search..."/>
+						</div>
+						<a href="#" id="search-btn"></a>
+					</div>			
+				</div>
+			</div>
+		</div>
+		<main>
+	    <ul id="order">
+	
+	    </ul>
+	  </main>
+		
+		<div class="pagers">
+			<a href="#"></a>
+		</div>
+		<div class="footer">
+			<div class="icon">
+				<a href="#">
+					<span class="hand"></span>
+					<span class="shop-icon"></span>
+				</a>				
+			</div>
+			<div class="slogen">
+				<dl>
+					<dt class="dt1"></dt>
+					<dd>
+						<p class="chinese">全球精品</p>
+						<p class="english">Global Selection</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt class="dt2"></dt>
+					<dd>
+						<p class="chinese">正品保证</p>
+						<p class="english">Autherticity Guaranteed</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt class="dt3"></dt>
+					<dd>
+						<p class="chinese">全场包邮</p>
+						<p class="english">Free Delivery</p>
+					</dd>
+				</dl>
+				<dl>
+					<dt class="dt4"></dt>
+					<dd>
+						<p class="chinese">400-897-6336</p>
+						<p class="english">工作日 09:00-18:00</p>
+					</dd>
+				</dl>
+			</div>	
+		</div>
+		<div class="copy">
+			<div class="copy-top">
+				<a class="phone" href="#">
+					<i></i>
+					<div class="text">
+						<p>iPone Android</p>
+						<p>客户端下载</p>
+					</div>
+					<div class="code">
+						<dl class="dl1">
+							<dt></dt>
+							<dd>下载iPone版</dd>
+						</dl>
+						<dl class="dl2">
+							<dt></dt>
+							<dd>下载Android版</dd>
+						</dl>
+					</div>
+				</a>
+				<ul>
+					<li class="wx">
+						<i></i>
+						<a href="#"></a>
+					</li>
+					<li class="wb"><a href="#"></a></li>
+					<li class="db"><a href="#"></a></li>
+				</ul>
+			</div>
+			<div class="copy-down">
+				<ul>
+					<li class="first"><a href="#">关于良仓</a></li>
+					<li><a href="#">服务协议</a></li>
+					<li><a href="#">隐私保护政策</a></li>
+					<li><a href="#">使用指南</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">加入我们</a></li>
+					<li><a href="#">友情链接</a></li>
+					<li><a href="#">私信良仓</a></li>
+				</ul>
+				<p class="copy-code">
+					<span>&copy;</span>
+					<span>2013-2015 北京良仓文化传播有限公司版权所有 京</span>
+					<span>京ICP备13010677号-1</span>
+					<span>京公网安备11010502025627</span>
+				</p>
+				<p class="company">公司名称：北京良仓文化传播有限公司  电话：010-58263516</p>
+				<p class="address">公司地址：北京朝阳区百子湾路32号6号楼1层60号.</p>
+				<p class="licence">社会信用统一代码：91110105059231575L  食品许可证：JY11105160159557  </p>
+				<p class="library-card"> 图书证名称：中华人民共和国出版物经营许可证  图书证编号：新出发京零 字第 朝 150051 号 </p>
+			</div>
+		</div>
+	</body>
+<script src="js/myajax.js" charset="utf-8"></script>
+  <script>
+    var oOrder = document.querySelector('#order');
+    myajax.get('http://h6.duchengjiu.top/shop/api_order.php', {token: localStorage.token}, function(err, responseText){
+      var json = JSON.parse(responseText);
+      console.log(json);
+      var data = json.data;
+      if (data.length === 0) {
+        oOrder.innerHTML = "<h3>您的订单为空</h3>";
+        return;
+      }
+      for (var i = 0; i < data.length; i++) {
+        var obj = data[i];
+        //遍历商品列表，拼装HTML
+        var goodsHTML = '';
+        for (var j = 0; j < obj.goods_list.length; j++) {
+          var goods = obj.goods_list[j];
+          goodsHTML += `
+            <div>
+              <img src="${goods.goods_thumb}">
+              <div class="describe">
+              	<p>${goods.goods_name}</p>
+              	<p>单价：${goods.goods_price}</p>
+             		<p>数量：${goods.goods_number}</p>
+              	<p>小计：${goods.goods_price * goods.goods_number}</p>
+              </div>
+            </div>
+          `;
+        }
+        //一件商品的总价
+        oOrder.innerHTML += `
+                          <li>
+                            <div class="title"><p>收货人：${obj.consignee}</p> <p>总价:${obj.total_prices} </p><span data-id="${obj.order_id}" class="cancel-order">取消订单</span></div>
+                            <div class="order-goods">
+                            ${goodsHTML}
+                            </div>
+                          </li>
+                          `;
+      }
+      var oLis = oOrder.querySelectorAll('li');
+     	oOrder.addEventListener('click', function(event){
+      event = event || window.event;
+      var target = event.target || event.srcElement;
+      if (target.nodeName === 'SPAN') {
+        target.parentNode.parentNode.parentNode.removeChild(target.parentNode.parentNode);
+      }
+    });
+    });
+
+    oOrder.onclick = function(event) {
+      event = event || window.event;
+      var target = event.target || event.srcElement;
+      if (target.className === 'cancel-order') {
+        if (!confirm('确认要取消订单吗?')) {
+          return;
+        }
+        var order_id = target.dataset.id;
+        myajax.post('http://h6.duchengjiu.top/shop/api_order.php?token='+localStorage.token+'&status=cancel', {order_id}, function(err, responseText) {
+          var json = JSON.parse(responseText);
+          if (json.code === 0) {
+            alert('订单取消成功');
+          }
+        });
+      }
+    }
+  </script>
+</html>
