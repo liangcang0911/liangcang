@@ -5,13 +5,6 @@
 		<title>良仓.生活美学平台</title>
 		<link rel="icon" href="../images/favicon.ico"/>
 		<link rel="stylesheet" href="../css/index.css" />
-		<style type="text/css">
-			.goods{
-				width: 1000px;
-				margin: 0 auto;
-				padding: 40px 0;
-			}
-		</style>
 	</head>
 	<body>
 		<div class="header">
@@ -66,7 +59,7 @@
 								</li>
 							</ol>
 						</li>
-						<li class="line">|</li>s
+						<li class="line">|</li>
 						<li><a href="add.html">添加良品</a></li>
 					</ul>
 				</div>				
@@ -76,7 +69,7 @@
 					<ul>
 						<li class="first"><a href="#">首页</a></li>
 						<li id="shop">
-							<a href="#">商店</a>
+							<a href="goods.html">商店</a>
 							<div class="shop">
 								<div>
 									<div class="shop-list" id="shop-list">
@@ -233,8 +226,115 @@
 				</div>
 			</div>
 		</div>
-		<div class="cat" id="cat">
-			
+		<div class="banner" id="banner">
+			<div class="banner-pic" id="banner-pic">
+				<ul>
+					<li><a href=""><img src="../images/1076.jpg"/></a></li>
+					<li><a href=""><img src="../images/1074.jpg"/></a></li>
+					<li><a href=""><img src="../images/1075.jpg"/></a></li>
+					<li><a href=""><img src="../images/1070.jpg"/></a></li>
+					<li><a href=""><img src="../images/1073.jpg"/></a></li>
+				</ul>	
+			</div>
+			<div class="left" id="left">
+			<i></i>
+			</div>
+			<div class="right" id="right">
+				<i></i>
+			</div>						
+			<div class="circle" id="circle">
+				<ul >
+					<li><i class="curren"></i></li>
+					<li><i></i></li>
+					<li><i></i></li>
+					<li><i></i></li>
+					<li><i></i></li>
+				</ul>				
+			</div>
+		</div>
+		<div class="banner2">
+			<a href="#" class="pic1 pic-small"><img src="../images/28519.jpg"/></a>
+			<a href="#" class="pic2 pic-small"><img src="../images/28538.jpg"/></a>
+			<a href="#" class="pic3 pic-big"><img src="../images/28540.jpg"/></a>
+			<a href="#" class="pic4 pic-small"><img src="../images/28539.jpg"/></a>
+			<a href="#" class="pic5 pic-small"><img src="../images/28521.jpg"/></a>
+		</div>
+		
+		
+		
+	<header><div class="header-container">
+    <script src="../js/myajax.js" charset="utf-8"></script>
+    <script>
+    var oCat = document.querySelector('#cat');
+    myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {}, function(error, responseText){
+        var json = JSON.parse(responseText);//返回的整个json对象
+        var data = json.data;//json对象当中的data是一个数组
+        for (var i = 0; i < data.length; i++) {
+          var obj = data[i];//数组里面的每一项是一个商品分类的对象
+          oCat.innerHTML += `<li><a href="goods.html?cat_id=${obj.cat_id}">${obj.cat_name}</a></li>`;
+        }
+    });
+    </script>
+  </div></header>
+
+  <main>
+  	<p>商品列表</p>
+    <ul id="goods-list" style="width: 1000px;margin: auto;">
+    	
+    </ul>
+  </main>
+  <script>
+    //name abc
+    //123
+
+    var cat_id = getQueryString('cat_id');
+    console.log(cat_id)
+
+    var Goods = document.querySelector('#goods-list');
+    myajax.get('http://h6.duchengjiu.top/shop/api_goods.php',
+    {cat_id: cat_id},
+    (err,responseText) => {
+      var json = JSON.parse(responseText);
+      console.log(json);
+      var data = json.data;
+      //判断如果没有数据，则显示空的提示
+      if (data.length === 0) {
+        Goods.innerHTML = "<center>后端程序员跑路了</center>";
+        return;
+      }
+      for (var i = 0; i < data.length; i++) {
+        var obj = data[i];
+	     	Goods.innerHTML += `
+	        <li style="float:left;margin:1px 9px;width:315px;"><a href="buyroom.html?goods_id=${obj.goods_id}">
+        	<div class="goods">
+						<a href="buyroom.html?goods_id=${obj.goods_id}" class="pic">
+							<img src="${obj.goods_thumb}"/>
+						</a>
+						<a href="buyroom.html?goods_id=${obj.goods_id}" class="txt">
+							<p class="price">${obj.price}</p>
+							<p class="tit">${obj.goods_name}</p>
+							<p class="describe"> ${obj.goods_desc}</p>
+						</a>
+					</div></a> 
+					<div class="like">
+						<a href="#" class="logo">
+							<img src="../images/932_1504775977.jpg"/>
+							知日
+						</a>
+						<a href="#" class="love">
+							238
+							<img src="../images/love_notice26_28.png"/>							
+						</a>
+					</div>   
+	        </li>`;
+      }
+    });
+  </script>
+  
+  
+  
+		<div class="pagers" style="overflow: hidden;margin-top: -20px;">
+			<a href="#"></a>
 		</div>
 		<div class="footer">
 			<div class="icon">
@@ -327,9 +427,6 @@
 		</div>
 	</body>
 	<script src="../js/animate.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../js/myajax.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="js/myajax.js" type="text/javascript" charset="utf-8"></script>-->
 	<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
-
-	</script>
 </html>

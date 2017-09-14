@@ -178,7 +178,10 @@ var oAs = oGoodList.querySelectorAll('a');
     for (var i = 0; i < data.length; i++) {
       var obj = data[i];
       console.log(obj);
+      
       oSpans[i].innerText = obj.cat_name;
+      console.log(obj.cat_id);
+      oAs[i].href = `goods.html?cat_id=${obj.cat_id}`;
     }
   });
   

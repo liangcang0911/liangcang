@@ -719,7 +719,16 @@ a.phone>.code{
 	color: #5c5c5c;
 	letter-spacing: 2px;
 }
-
+main>p{
+	width: 1000px;
+	height: 40px;
+	margin: auto;
+	border-bottom: 1px solid #CCCCCC;
+	margin-bottom: 40px;
+	font-size: 18px;
+	line-height: 40px;
+	text-align: center;
+}
 
 
 

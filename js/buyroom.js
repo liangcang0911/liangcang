@@ -1,7 +1,6 @@
 var ogoods = document.querySelector('#goods');
 var obuyin = document.querySelector('#buyin');
 var op = document.querySelector("p[id=goodsdesc]")
-console.log(obuyin)
 var goods_id = getQueryString('goods_id');
 myajax.get('http://h6.duchengjiu.top/shop/api_goods.php', {
   // goods_id: goods_id ES5
@@ -24,18 +23,33 @@ myajax.get('http://h6.duchengjiu.top/shop/api_goods.php', {
 				<div class="gdname">${obj.goods_name}</div>
 				<div id="gdprice">价格 : <span>¥${obj.price}</span></div>
 				<div id="s-icon"><span id="span1"></span>免运费&nbsp;<span id="span2"></span>&nbsp;&nbsp;&nbsp;正品授权</div>
-			    <div id="gdtype">数量 : <span>一份</span></div>
+			    <div id="gdtype">星级 : <span>☆☆☆</span></div>
 			    <div id="gdnum">数量 : 
 			    	<i id="jian"></i>
-			    	<span>1</span>
+			    	<span id="num">1</span>
 			    	<i id="jia"></i>
 			    </div>
 			    <div><input type="button" id="add-to-cart" value="立即购买"></div>
 			    <div id="buyout">
 			    	<a href="#" id="a1" class="add-to-cart"><i></i>加入购物车</a>
 			    	<a href="#" id="a2"><i></i>分享</a>
-			    </div>
-  `;
+			    </div>`;
+			    var ospan = document.querySelector("span[id=num]") 
+			    var ojian = document.querySelector("i[id=jian]") 
+			    var ojia = document.querySelector("i[id=jia]") 
+			    console.log(ojian)
+			    ojian.onclick = function(){
+			    	ospan.innerText -=1
+			    	if(ospan.innerText <= 0){
+			    		ospan.innerText =0
+			    	}
+			    }
+			    ojia.onclick = function(){
+			    	ospan.innerText=parseInt(ospan.innerText)+1
+			    	if(ospan.innerText > 10){
+			    		ospan.innerText = 10
+			    	}
+			    }
 });
 var oa = document.querySelector("a[id=catname]")
 myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {
@@ -71,4 +85,4 @@ myajax.get('http://h6.duchengjiu.top/shop/api_cat.php', {
           }
         })
       }
-    }
+   }
