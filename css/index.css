@@ -69,11 +69,11 @@ ul,ol{list-style: none;}
 	top: 56px;
 	z-index: 999;
 	width: 320px;
-	height: 122px;
+	/*height: 122px;*/
 }
 #shopping-cart .cart .goods{
 	width: 320px;
-	height: 62px;
+	/*height: 62px;*/
 	background-color: #292f34;
 	line-height: 62px;
 	text-align: center;
@@ -83,12 +83,13 @@ ul,ol{list-style: none;}
 #shopping-cart .cart>a{
 	display: block;
 	width: 320px;
-	height: 60px;
-	background-color: #7dbfde;
+	/*height: 60px;*/
+	background-color: #292f34;
 	line-height: 60px;
 	text-align: center;
 	font-size: 16px;
 	color: #FFFFFF;
+	
 }
 #shopping-cart:hover .cart{display: block;}
 /*==========消息二级菜单===================================*/
@@ -425,7 +426,7 @@ ul,ol{list-style: none;}
 }
 .goods{
 	width: 316px;
-	height: 316px;
+	/*height: 316px;*/
 	position: relative;
 }
 .goods:hover .txt{display: block;}

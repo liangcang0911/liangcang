@@ -738,6 +738,7 @@ table img {
 	color: white;
 	text-align: center;
 	line-height: 30px;
+	margin-top: 5px;
 }
 #control{
 	width: 60px;
@@ -748,4 +749,38 @@ table img {
 }
 #control:hover{
 	background: #3c3c3c;
+}
+#listgoods li{
+	padding-bottom: 30px;
+	width: 300px;
+}
+/*#listgoods li:hover{
+	background: #3c3c3c;
+}*/
+#listgoods #spic{
+	float: left;
+	width:45px;
+	height: 45px;
+	margin: 8px ;
+}
+#listgoods #spic img{
+	width: 100%;
+}
+#listgoods #p1{
+	font-size: 12px;
+	float: right;
+	margin-top: -18px;
+	height: 12px;
+}
+#listgoods #p2{
+	font-size: 14px;
+	float: left;
+	height: 14px;
+	margin-top: 12px;
+}
+#listgoods #p3{
+	font-size: 16px;
+	float: right;
+	height: 16px;
+	margin-top: 14px;
 }

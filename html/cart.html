@@ -476,27 +476,28 @@
     }
     
     
-//  var goodcar = document.querySelector("ul[id=listgoods]")
-//  console.log(goodcar)
-//  var ono = document.querySelector("a[id=no]");
-//  console.log(ono)
-//  myajax.get('http://h6.duchengjiu.top/shop/api_cart.php', {token: localStorage.token}, function(err, responseText){
-//    var json = JSON.parse(responseText);
-//    console.log(json);
-//    var data = json.data;
-//    for (var i = 0; i < data.length; i++) {
-//      var obj = data[i];
-//      //一件商品的总价
-//      goodcar.innerHTML += `
-//                          <li>
-//                          <span id="spic"><img src="${obj.goods_thumb}"></span>
-//                          <p id="p1"> ${obj.goods_name}</p>
-//                          <p id="p2">1</p>
-//                          <p id="p3">&yen;${obj.goods_price}</p>
-//                          </li>
-//                          `;
-//    }
-////    getSum();
-//  });
+    var goodcar = document.querySelector("ul[id=listgoods]")
+    console.log(goodcar)
+    var ono = document.querySelector("a[id=no]");
+    console.log(ono)
+    myajax.get('http://h6.duchengjiu.top/shop/api_cart.php', {token: localStorage.token}, function(err, responseText){
+      var json = JSON.parse(responseText);
+      console.log(json);
+      var data = json.data;
+      for (var i = 0; i < data.length; i++) {
+        var obj = data[i];
+        //一件商品的总价
+        goodcar.innerHTML += `
+                            <li>
+                            <span id="spic"><img src="${obj.goods_thumb}"></span>
+                            <p id="p1"> ${obj.goods_name}</p>
+                            <p id="p2">数量 : 1</p>
+                            <p id="p3">&yen;${obj.goods_price}</p>
+                            </li>
+                            `;
+      }
+//    getSum();
+//   location.reload();
+    });
   </script>
 </html>
